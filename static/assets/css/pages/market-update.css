@@ -1,0 +1,141 @@
+/* contact style */
+#MainBanner{
+	padding-top: 0px;
+}
+
+#MainBanner .container .content{
+	padding-top: 45px;
+	max-width: 940px;
+	padding-bottom: 22px;
+}
+
+#MainBanner .container .content p{
+	margin-bottom: 30px;
+}
+
+#MarketGap{
+	background: #013042;
+	position: relative;
+	padding-left: 47.80380673499268%;
+}
+
+#MarketGap .container{
+	margin: 0px;
+	padding-left: 60px;    
+	padding-right: 70px;    
+	max-width: 652px;
+}
+
+#MarketGap h4{ margin-top: 55px; }
+#MarketGap p{ margin-bottom: 81px; }
+
+#MarketGap .img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: calc(100% + 60px);
+	width: 47.80380673499268%;
+	background: url(../../img/market-update.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+#OverviewPerStandard{
+	padding-top: 110px;
+	overflow: hidden;
+	padding-bottom: 215px;
+}
+
+#OverviewPerStandard li{
+	width: 50%;
+	display: inline-block;
+	margin-right: -5px;
+}
+
+#OverviewPerStandard img{
+	/* width: 125.77%; */
+	width: 132.77%;
+}
+
+
+
+#OverviewPerStandard .uptake{ position: relative; }
+
+#OverviewPerStandard .uptake .zoom{
+	position: absolute;
+	top: 30px;
+	right: 0px;
+	width: 48px;
+	height: 48px;
+	background: url(../../img/icons/expand.png) center center no-repeat;
+	display: block;
+	font-size: 0px;
+	transition: all ease-in-out .1s;
+}
+
+#OverviewPerStandard .uptake .zoom:hover{
+	transform: scale(1.1);
+}
+
+#OverviewPerStandard .cottonlist{ 
+	background: #edebde;
+	padding-top: 53px;
+}
+
+#OverviewPerStandard .cottonlist .row.list [class*="col-"]:nth-child(odd){
+	padding-left: 170px;
+	position: relative;
+}
+
+#OverviewPerStandard .cottonlist .row.list [class*="col-"]:nth-child(odd) img{
+	position: absolute;
+	left: 33px;
+	top: 5px;
+	width: 100px;
+}
+
+#OverviewPerStandard .cottonlist .row.list [class*="col-"]:nth-child(even){
+	padding-top: 50px;
+}
+
+#OverviewPerStandard .cottonlist hr{	
+    margin-top: 56px;
+    margin-bottom: 53px;
+}
+
+#OverviewPerStandard .cottonlist .block{
+	position: relative;
+}
+
+#OverviewPerStandard .cottonlist .block .img{
+	position: absolute;
+	height: 440px;
+	width: 133%;
+	background: url(../../img/market-update-bottom.jpg) top left no-repeat;
+	background-size: cover;
+}
+
+#OverviewPerStandard .cottonlist .block p{	
+    font-size: 28px;
+    line-height: 38px;
+    color: #fff;
+    margin-bottom: 27px;
+}
+
+#OverviewPerStandard .cottonlist .block .content{
+	padding: 60px 60px;
+	position: relative;
+	padding-top: 46px;
+}
+
+/* end of contact style */
+@media only screen and (max-width : 1440px) {}
+
+@media only screen and (max-width : 768px) {}
+
+@media only screen and (max-width : 650px) {}
+
+@media only screen and (max-width : 480px) {}
+
+@media only screen and (max-width : 400px) {}
+
+@media only screen and (max-height : 480px) {}

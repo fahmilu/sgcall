@@ -1,0 +1,87 @@
+a:hover,a:focus {
+	text-decoration: none !important;
+}
+.subbar {
+	height: auto !important;
+    top: 25px !important;
+}
+.cke_toolgroup {
+	height: 28px !important;
+}
+input[type="text"], input[type="password"], input[type="password"] {
+	width: 100%;
+}
+.form-control {
+	background: #ffffff !important;
+	padding: 6px 12px !important;
+}
+/*
+| ------------------------------
+| Helpers
+| ------------------------------
+*/
+.display-none {
+	display:none;
+}
+.display-block {
+	display:block;
+}
+.relative {
+	position: relative;
+}
+.absolute {
+	position: absolute;
+}
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.clearfix {
+	clear: both;
+}
+/*
+| ------------------------------
+| Custom
+| ------------------------------
+*/
+.sections_bar {
+	z-index: 1;
+}
+.form_inputs .input > input {
+	min-width: inherit !important;
+}
+.table .publish {
+	color:#669900;
+}
+.chzn-container {
+	width: 100% !important;
+}
+.file-input .input-group-btn {
+	top:-5px;
+}
+.cke_description {
+	width: 100% !important;
+}
+.video-responsive {
+    height: 0;
+    margin-bottom: 0.88889rem;
+    overflow: hidden;
+    padding-bottom: 67.5%;
+    padding-top: 1.38889rem;
+    position: relative;
+}
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed,
+.video-responsive video {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+}

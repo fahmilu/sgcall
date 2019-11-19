@@ -1,0 +1,305 @@
+// home style
+#homebanner{
+	// min-height: 500px;
+	// background-color: $second-color;
+	position: relative;
+	img{
+		width: 100%;
+	}
+	.slideshow{ 
+		position: relative;
+		img{
+			display: block;
+			width: 100%;
+		}
+		.slick-arrow{
+			@include slick-arrow(40px, 80px, 50px, 'slideshow');
+			&:hover{
+				opacity: .8;
+			}
+			@include breakpoint($W1200){
+				@include slick-arrow(40px, 40px, 20px, 'trip');
+			}
+			@include breakpoint(max-width 450px){
+				@include slick-arrow(30px, 30px, 10px, 'trip');
+			}
+		}
+		.slick-dots{
+			@include breakpoint($W768){
+				// @include horizontal-center-abs;
+				position: absolute;
+				right: 20px;
+				bottom: 20px;
+				// text-align: center;
+				// width: 100%;
+			}
+			@include breakpoint($MW768){
+				@include pos-abs(unset, unset, 40px, 120px);
+			}
+		}
+	}
+	@include breakpoint($W576){
+		.scrolldown{
+			@include watermark('../img/icons/scrolldown.png', 40px, 40px);
+			bottom: -20px;
+			@include horizontal-center-abs;
+		}
+	}
+}
+
+#AboutUs{
+	padding-top: 80px;
+	@include breakpoint($MW768){
+		padding-top: 0px;
+		padding-bottom: 75px;
+	}
+	.container{
+		max-width: 1180px;
+		img{
+			@include breakpoint($MW768){
+				margin-top: -50px;
+			}
+		}
+		p{
+			@include font-opensans;
+		}
+	}
+}
+
+#HomeStories{
+	padding-top: 30px;
+	@include breakpoint($MW768){
+		padding-bottom: 71px;	
+		padding-top: 75px;
+	}
+	.list-stories{
+		margin-top: 30px;
+	}
+	.btn-area{
+		margin-top: 14px;
+	}
+}
+
+#HomeEvents{
+	background-color: #ebebeb;
+	padding-top: 45px;
+	padding-bottom: 30px;
+	@include breakpoint($MW768){
+		padding-bottom: 75px;	
+	}
+	@include breakpoint($W768){
+		.p-heading{
+			margin-bottom: 40px;
+		}
+	}
+	.bg-white{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	.btn-area{
+		margin-top: 17px;
+	}
+	@include breakpoint($W576){
+		.container{
+			padding: 0px!important;
+			padding-bottom: 20px!important;
+			.slick-arrow{
+				@include slick-arrow(30px, 30px, 20px, 'trip');
+			}
+			.slick-dots{
+				width: 100%;
+				text-align: center;
+				right: 0px;
+				bottom: 0px;
+				button{
+					border-color: #000;
+				}
+			}
+			.slick-dots li.slick-active button {
+			    background-color: #000;
+			}
+			.slick-slide{
+				> div{ 
+					height: 100%; 
+					.col-md-6{
+						height: 100%;
+					}
+				}
+				opacity: .5;
+				&.slick-center{
+					opacity: 1;
+				}
+			}
+			.btn-area{
+				padding: 0px 20px;
+			}
+		}
+	}
+	@include breakpoint(max-width 360px){
+		.container{
+			padding: 0px 20px!important;			
+			.btn-area{
+				padding: 0px;
+			}
+		}
+	}
+}
+
+
+#HomePromo{
+	background-color: #ebebeb;
+	padding-top: 28px;
+	padding-bottom: 115px;	
+	.btn-area{
+		margin-top: 40px;
+	}
+	.list-promo{
+		margin-top: 79px;
+		@include breakpoint($W768){
+			margin-top: 40px;	
+		}
+		.col-md-6{
+			margin-bottom: 50px;
+		}
+	}
+
+	@include breakpoint($W576){
+		.container{
+			.list-promo{
+				padding: 0px 10px;
+				padding-bottom: 50px;
+				.slick-slide{
+					> div{
+						height: 97%;
+						.col-md-6{
+							margin-bottom: 0px;
+							height: 100%;
+						}
+					}					
+				}
+				.promo{
+					background-color: #fff;
+					padding: 20px;
+					padding-bottom: 80px;
+					margin-bottom: 20px;
+					box-shadow: 0px 8px 8.73px 0.27px rgba(0, 0, 0, 0.21);
+					.bottom{
+						padding: 0px 20px 25px;
+					}
+				}
+			}
+			.slick-arrow{
+				@include slick-arrow(18px, 32px, -18px, 'promo');
+			}
+			.slick-dots{
+				width: 100%;
+				text-align: center;
+				right: 0px;
+				bottom: 0px;
+				button{
+					border-color: #000;
+				}
+			}
+			.slick-dots li.slick-active button {
+			    background-color: #000;
+			}
+		}
+	}
+	@include breakpoint($W360){
+		.container{
+			.list-promo{
+				padding: 0px;
+			}
+			.slick-arrow{ display: none!important; }			
+		}
+	}
+}
+
+.list-trip{
+	position: relative;
+	.trip{
+		@include image-background('');
+		padding-top: 48px!important;
+		padding-bottom: 80px!important;
+		.container{
+			max-width: 1000px;
+    		padding: 0px 120px!important;
+			@include breakpoint(max-width 768px){
+				padding: 0px 80px!important;
+			}
+			@include breakpoint(max-width 576px){
+				padding: 0px 25px!important;
+			}
+			h2{   
+			    max-width: 600px;
+			    margin: 0px auto 17px;
+			}
+			p{
+				margin-bottom: 47px;
+			}
+			.date{
+				@include font-black;
+				font-size: 18px;
+				margin-bottom: 45px;
+			}
+		}
+	}
+	.slick-dots{
+		text-align: center;
+		@include pos-abs(unset, 0px, 20px, 0px);
+		@include horizontal-center-abs;
+	}
+	.slick-arrow{
+		@include slick-arrow(70px, 70px, 50px, 'trip');
+		@include breakpoint(max-width 1200px){
+			@include slick-arrow(70px, 70px, 30px, 'trip');
+		}
+		@include breakpoint(max-width 768px){
+			@include slick-arrow(30px, 30px, 20px, 'trip');
+		}
+		&:hover{
+			opacity: .8;
+		}
+	}
+}
+
+#Galeri{
+	background: #f82828 url(../img/bg-gallery.jpg) center bottom no-repeat;
+	background-size: 100% auto;
+	padding-bottom: 71px;	
+	padding-top: 75px;
+	@include breakpoint($MW768){		
+		padding-top: 144px;
+		padding-bottom: 150px;
+	}
+	@include breakpoint($W768){
+		.btn-area{
+			margin-top: 40px;
+		}		
+	}
+	.label{
+		color: #010101;
+	}
+	h2{
+		margin-bottom: 29px;
+	}
+	.ig-post{
+		display: block;
+		overflow: hidden;
+		padding-bottom: 100%;
+		position: relative;
+		margin-bottom: 20px;
+		.img{
+			@include pos-abs(0,0,0,0);
+			@include watermark('', 100%, 100%);
+			@include animation(.25s);
+		}
+		&:hover{
+			.img{
+				transform: scale(1.05);
+			}
+		}
+	}	
+}

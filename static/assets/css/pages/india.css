@@ -1,0 +1,85 @@
+/* india style */
+#MainBanner .container .content{ padding: 27px 80px 31px 70px; }
+#TopIndia .list-company{
+	margin-bottom: 25px;
+}
+
+#TopIndia .list-company .list{
+	display: table;
+	margin-right: 20px;
+	height: 90px;
+	border-radius: 4px;
+	background: #f5f5f5;
+	width: 25%;
+	max-width: 190px;
+	float: left;
+
+}
+
+#TopIndia .list-company:before,
+#TopIndia .list-company:after{
+	display: table;
+    content: " ";
+}
+
+#TopIndia .list-company:after{ clear: both; }
+
+#TopIndia .list-company .list:last-child{ margin: 0px; }
+
+#TopIndia .list-company .list .company{
+	text-align: center;
+	vertical-align: middle;
+	display: table-cell;
+	font-family: 'DIN Alternate';
+	font-weight: bold;
+	color: #363636;
+	text-transform: uppercase;
+	font-size: 15px;
+	letter-spacing: .1em;
+}
+
+section#Context{
+	padding-top: 50px;
+}
+
+section#Context .container{
+	padding-top: 52px;
+	/* padding-bottom: 0px; */
+}
+
+section#Context .container .row{ margin-bottom: 56px; }
+
+section#BrandExplanations{
+	padding-top: 52px;
+}
+
+section#BrandExplanations .container{ 
+	padding-bottom: 30px;
+	background: #fff; 
+}
+
+section#Recommendation{
+	background: #013042;
+	margin-top: -60px;
+	padding-top: 111px;
+	padding-bottom: 30px;
+}
+
+section#Recommendation *{
+	color: #fff!important;
+}
+
+section#OtherLink .container [class*="col-"]{ padding-top: 29px; }
+
+/* end of india style */
+@media only screen and (max-width : 1440px) {}
+
+@media only screen and (max-width : 768px) {}
+
+@media only screen and (max-width : 650px) {}
+
+@media only screen and (max-width : 480px) {}
+
+@media only screen and (max-width : 400px) {}
+
+@media only screen and (max-height : 480px) {}

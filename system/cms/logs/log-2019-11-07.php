@@ -1,0 +1,10 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2019-11-07 03:00:30 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/SJ/stb/system/codeigniter/database/drivers/mysql/mysql_driver.php 84
+ERROR - 2019-11-07 03:00:37 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/SJ/stb/system/codeigniter/database/drivers/mysql/mysql_driver.php 84
+ERROR - 2019-11-07 03:00:37 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/SJ/stb/system/codeigniter/database/drivers/mysql/mysql_driver.php 84
+ERROR - 2019-11-07 03:00:37 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/SJ/stb/system/codeigniter/database/drivers/mysql/mysql_driver.php 84
+ERROR - 2019-11-07 03:01:28 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/SJ/stb/system/codeigniter/database/drivers/mysql/mysql_driver.php 84
+ERROR - 2019-11-07 03:01:49 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/SJ/stb/system/codeigniter/database/drivers/mysql/mysql_driver.php 84
+ERROR - 2019-11-07 03:01:53 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/SJ/stb/system/codeigniter/database/drivers/mysql/mysql_driver.php 84
+ERROR - 2019-11-07 03:02:06 --> Severity: 8192  --> mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/SJ/stb/system/codeigniter/database/drivers/mysql/mysql_driver.php 84

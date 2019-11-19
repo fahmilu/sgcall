@@ -1,0 +1,36 @@
+/* why-cotton-ranking style */
+
+section#WhyCotton .container{
+	background: #319044 url('../../img/img-cotton.jpg') center right no-repeat;
+	background-size: 50% auto;
+}
+
+section#WhyCotton .container .content{
+	width: 50%;
+	padding: 33px 0px 37px;
+	padding-right: 100px;
+	color: #fff!important;
+}
+
+section#WhyCotton .container .content h4{
+	color: #fff!important;
+}
+
+section#WhyCotton .container .content p{
+	margin: 0px;
+}
+
+#IssuesAndProblems{ padding-top: 51px; padding-bottom: 34px; }
+
+
+@media only screen and (max-width : 1440px) {}
+
+@media only screen and (max-width : 768px) {}
+
+@media only screen and (max-width : 650px) {}
+
+@media only screen and (max-width : 480px) {}
+
+@media only screen and (max-width : 400px) {}
+
+@media only screen and (max-height : 480px) {}

@@ -1,0 +1,416 @@
+/* company profile page sections  */
+#CompanyProfile{
+	background: #ffffff;
+}
+
+#CompanyProfile .title.container {
+    width: 100%;
+    max-width: 1400px;
+    height: 120px;
+    padding: 0px 20px;
+    padding-top: 28px;
+    text-align: center;
+    position: relative;
+}
+
+#CompanyProfile .title.container a{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #252525;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 36px;
+}
+
+#CompanyProfile .title.container a:hover{
+	color: #319044;
+}
+
+#CompanyProfile .title.container i{
+	display: inline-block;
+	vertical-align: middle;
+	width: 36px;
+	height: 36px;
+	border-radius: 36px;
+	transition: all ease-in-out .25s;		
+}
+
+#CompanyProfile .title.container a.prev-company{
+	left: 8px;
+}
+
+#CompanyProfile .title.container a.prev-company i{
+	float: left;
+	background: url(../../img/icons/prev.png) center center no-repeat;
+	margin-right: 10px;
+}
+
+#CompanyProfile .title.container a.next-company{
+	right: 8px;
+}
+
+#CompanyProfile .title.container a.next-company i{
+	float: right;
+	background: url(../../img/icons/next.png) center center no-repeat;
+	margin-left: 10px;
+}
+
+#CompanyProfile .title.container a.prev-company:hover i{
+	background: url(../../img/icons/prev-hover.png) center center no-repeat;
+	box-shadow: -2px 1px 5px 0px rgba(0,0,0, 0.2);
+}
+
+#CompanyProfile .title.container a.next-company:hover i{
+	background: url(../../img/icons/next-hover.png) center center no-repeat;
+	box-shadow: 2px 1px 5px 0px rgba(0,0,0, 0.2);
+}
+
+#CompanyProfile .content.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0px;
+    padding-left: 322px;
+    position: relative;
+    border-top: 1px solid #f2f2f2;
+    background: #f2f2f2;
+}
+
+#CompanyProfile .content.container .company-info{
+	background: #fff;
+	position: absolute;
+	width: 322px;
+	left: 0px;
+	top: 2px;
+	height: 100%;
+}
+
+#CompanyProfile .content.container .company-info .detail{
+	padding: 21px 30px 0px;
+}
+
+#CompanyProfile .content.container .company-info > *{
+	border-bottom: 2px solid #f2f2f2;
+}
+
+#CompanyProfile .content.container .company-info ul{
+	color: #555555;
+	list-style: none;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+#CompanyProfile .content.container .company-info ul.country{
+	border-bottom: 1px solid #e6e6e6;
+	padding-bottom: 22px;
+	margin-bottom: 22px;
+}
+
+#CompanyProfile .content.container .company-info ul .title{
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+#CompanyProfile .content.container .company-info > a{
+	display: block;
+	line-height: 50px;
+	padding: 0px 30px;
+	font-size: 14px;
+	color: #555555;
+	font-weight: 700;
+}	
+
+#CompanyProfile .content.container .company-info > a:hover{ color: #319044; }
+
+#CompanyProfile .content.container .company-info > a.back i{
+	display: inline-block;
+	vertical-align: -3px;
+	width: 11px;
+	height: 16px;
+	transition: all ease-in-out .25s;		
+	background: url(../../img/icons/prev.png) center center no-repeat;
+	background-size: cover!important;
+	margin-right: 14px;
+}
+
+#CompanyProfile .content.container .company-info > a.back:hover i{
+	background: url(../../img/icons/prev-hover.png) center center no-repeat;
+}
+
+#CompanyProfile .content.container .company-performing{
+	text-align: center;
+	padding-top: 34px;
+	padding-bottom: 77px;
+	background: url(../../img/shadow.png) center bottom no-repeat;
+}
+
+#CompanyProfile .content.container .company-performing .row{
+	padding-top: 31px;
+	margin: 0px;
+}
+
+#CompanyProfile .content.container .company-performing h5{
+	color: #636363;
+	margin-bottom: 23px;
+}
+
+#CompanyProfile .content.container .company-performing .score{
+	width: 110px;
+	height: 136px;
+	background-size: 100% auto!important;
+	line-height: 135px;
+	color: #fff;
+	font-weight: bold;
+	display: inline-block;
+	font-size: 40px;
+}
+
+#CompanyProfile .content.container .company-performing .score.leading-the-way{
+	background: url(../../img/icons/Card-Green@2x.png) center center no-repeat;
+}
+
+#CompanyProfile .content.container .company-performing .score.well-on-the-way{
+	background: url(../../img/icons/Card-Yellow@2x.png) center center no-repeat;
+}
+
+#CompanyProfile .content.container .company-performing .score.starting-the-journey{
+	background: url(../../img/icons/Card-Orange@2x.png) center center no-repeat;
+}
+
+#CompanyProfile .content.container .company-performing .score.not-yet-in-the-starting-blocks{
+	background: url(../../img/icons/Card-Red@2x.png) center center no-repeat;
+}
+
+#CompanyProfile .content.container .company-performing .policy,
+#CompanyProfile .content.container .company-performing .uptake,
+#CompanyProfile .content.container .company-performing .traceability{
+	width: 100%;
+	color: #fff;
+	font-weight: bold;
+	display: inline-block;
+	font-size: 40px;
+	padding-top: 107px;
+}
+
+#CompanyProfile .content.container .company-performing .policy{
+	background-size: 100px auto!important
+}
+
+#CompanyProfile .content.container .company-performing .uptake{
+	background-size: 132.5px auto!important
+}
+
+#CompanyProfile .content.container .company-performing .traceability{
+	background-size: 95px auto!important
+}
+
+#CompanyProfile .content.container .company-performing .policy.leading-the-way{
+	background: url(../../img/icons/Policy-Green@2x.png) top center no-repeat;
+	color: #318b25;
+}
+
+#CompanyProfile .content.container .company-performing .policy.well-on-the-way{
+	background: url(../../img/icons/Policy-Yellow@2x.png) top center no-repeat;	
+	color: #f8cd01;
+
+}
+
+#CompanyProfile .content.container .company-performing .policy.starting-the-journey{
+	background: url(../../img/icons/Policy-Orange@2x.png) top center no-repeat;
+	color: #f27a24;
+}
+
+#CompanyProfile .content.container .company-performing .policy.not-yet-in-the-starting-blocks{
+	background: url(../../img/icons/Policy-Red@2x.png) top center no-repeat;
+	color: #c81d43;
+}
+
+#CompanyProfile .content.container .company-performing .uptake.leading-the-way{
+	background: url(../../img/icons/Cotton-Green@2x.png) top center no-repeat;
+	color: #318b25;
+}
+
+#CompanyProfile .content.container .company-performing .uptake.well-on-the-way{
+	background: url(../../img/icons/Cotton-Yellow@2x.png) top center no-repeat;	
+	color: #f8cd01;
+}
+
+#CompanyProfile .content.container .company-performing .uptake.starting-the-journey{
+	background: url(../../img/icons/Cotton-Orange@2x.png) top center no-repeat;
+	color: #f27a24;
+}
+
+#CompanyProfile .content.container .company-performing .uptake.not-yet-in-the-starting-blocks{
+	background: url(../../img/icons/Cotton-Red@2x.png) top center no-repeat;
+	color: #c81d43;
+}
+
+#CompanyProfile .content.container .company-performing .traceability.leading-the-way{
+	background: url(../../img/icons/Trace-Green@2x.png) top center no-repeat;
+	color: #318b25;
+}
+
+#CompanyProfile .content.container .company-performing .traceability.well-on-the-way{
+	background: url(../../img/icons/Trace-Yellow@2x.png) top center no-repeat;	
+	color: #f8cd01;
+
+}
+
+#CompanyProfile .content.container .company-performing .traceability.starting-the-journey{
+	background: url(../../img/icons/Trace-Orange@2x.png) top center no-repeat;
+	color: #f27a24;
+}
+
+#CompanyProfile .content.container .company-performing .traceability.not-yet-in-the-starting-blocks{
+	background: url(../../img/icons/Trace-Red@2x.png) top center no-repeat;
+	color: #c81d43;
+}
+
+#CompanyProfile .content.container .company-responsibility{
+	text-align: center;
+	padding-top: 45px;
+	padding-bottom: 13px;
+	background: url(../../img/shadow.png) center bottom no-repeat;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap{
+	background-size: 100% auto!important;
+	width: 100%;
+	max-width: 1000px;
+	position: relative;
+	padding-bottom: 38.5%;
+	margin: 40px auto;
+	text-align: right;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap .text{
+	position: absolute;
+	font-weight: 700;
+	line-height: 30px;
+	opacity: .5;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap .text:after{
+	width: 64px;
+	height: 2px;
+	position: absolute;
+	bottom: 11px;
+    right: -10px;
+	content: '';
+	transform: translateX(100%);
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap .text.step1{
+	color: #c81d43;
+    bottom: 25%;
+    right: 84%;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap .text.step2{
+	color: #f27a24;
+    bottom: 52%;
+    right: 59%;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap .text.step3{
+	color: #f8cd01;
+    bottom: 74%;
+    right: 37%;
+
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap .text.step4{
+	color: #318b25;
+	bottom: 88%;
+    right: 24%;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap .text span.timeline{
+	display: block;
+	color: #252525;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap .text.step1:after{
+	background: #c81d43;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap .text.step2:after{
+	background: #f27a24;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap .text.step3:after{
+	background: #f8cd01;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap .text.step4:after{
+	background: #318b25;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap.leading-the-way{
+	background: url(../../img/Journey/4.jpg) center center no-repeat;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap.well-on-the-way{
+	background: url(../../img/Journey/3.jpg) center center no-repeat;	
+
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap.starting-the-journey{
+	background: url(../../img/Journey/2.jpg) center center no-repeat;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap.not-yet-in-the-starting-blocks{
+	background: url(../../img/Journey/1.jpg) center center no-repeat;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap.not-yet-in-the-starting-blocks .step1{
+	opacity: 1;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap.starting-the-journey .step2,
+#CompanyProfile .content.container .company-responsibility .roadmap.starting-the-journey .step1{
+	opacity: 1;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap.well-on-the-way .step3,
+#CompanyProfile .content.container .company-responsibility .roadmap.well-on-the-way .step2,
+#CompanyProfile .content.container .company-responsibility .roadmap.well-on-the-way .step1{
+	opacity: 1;
+}
+
+#CompanyProfile .content.container .company-responsibility .roadmap.leading-the-way .text{
+	opacity: 1;
+}
+
+
+#CompanyProfile .content.container .company-performance-analysis{
+	max-width: 750px;
+	padding: 35px 55px 60px;
+}
+
+#CompanyProfile .content.container .company-performance-analysis a.button{
+    position: relative;
+    line-height: 40px;
+    height: 40px;
+    border: none!important;
+    padding: 0px 20px;
+    min-width: 0px;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+#CompanyProfile .content.container .company-performance-analysis p{ line-height: 24px; }
+
+/* end of checkscore page sections  */
+@media only screen and (max-width : 1440px) {}
+
+@media only screen and (max-width : 768px) {}
+
+@media only screen and (max-width : 650px) {}
+
+@media only screen and (max-width : 480px) {}
+
+@media only screen and (max-width : 400px) {}
+
+@media only screen and (max-height : 480px) {}
+

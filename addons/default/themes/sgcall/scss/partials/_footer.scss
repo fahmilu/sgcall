@@ -1,0 +1,70 @@
+// footer
+footer {
+	// height: 150px;
+	background-color: #252525;
+	padding: 50px 0px;
+	@include breakpoint($W768) {
+		padding: 26px 0px;
+	}
+	.logo-area {
+		height: 50px;
+		@include breakpoint($W1200) {
+			height: 40px;
+		}
+		@include breakpoint($W576) {
+			height: 27px;
+		}
+		a {
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+			margin-left: 60px;
+			@include breakpoint(max-width 990px) {
+				margin-top: 10px;
+			}
+			@include breakpoint($W768) {
+				margin: 0px 10px 20px;
+			}
+			img {
+				height: 100%;
+			}
+		}
+	}
+	.copyright {
+		letter-spacing: 0px;
+		line-height: 24px;
+		font-size: 14px;
+		padding-top: 13px;
+		@include font-regular;
+		@include breakpoint($W1200) {
+			padding-top: 18px;
+		}
+		@include breakpoint($W768) {
+    		padding-top: 20px;
+			@include font-layout(12, 4);
+			// max-width: 280px;
+			margin: 0px auto;
+		}
+		@include breakpoint($W360) { max-width: 310px; }
+		@include breakpoint(576px){
+			br{
+				display: none;
+			}
+		}
+	}
+	.img{
+		@include watermark('../img/logo-footer.png', 397px, 51px);
+		margin-top: 15px;
+		@include breakpoint($W1200) {
+			width: 305px;
+    		height: 39px;
+		}
+		@include breakpoint($W768) {
+			margin: 0px auto;
+		}
+		@include breakpoint($W360) {
+		    width: 270px;
+		    height: 33px;
+		}
+	}
+}

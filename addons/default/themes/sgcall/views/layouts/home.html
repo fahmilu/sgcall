@@ -1,0 +1,196 @@
+{{ theme:partial name="header" }}
+<section id="homebanner">
+	<div class="slideshow d-none d-sm-block">
+		{{banner:slideshow cat_slug="home-slideshow-desktop"}}
+		<div class="list">	
+			{{display}}		
+		</div>
+		{{/banner:slideshow}}
+	</div>
+	<div class="slideshow d-block d-sm-none">
+		{{banner:slideshow cat_slug="home-slideshow-mobile"}}
+		<div class="list">	
+			{{display}}		
+		</div>
+		{{/banner:slideshow}}
+	</div>
+	<a href="#AboutUs" class="d-block d-sm-none js-scroll-trigger scrolldown" ></a>
+</section>
+<section id="AboutUs">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="d-block d-md-none text-center">
+					<!-- <div class="label text-uppercase">about us</div> -->
+					<h2 class="text-uppercase">Cari tahu update event terkini di Singapura<!-- <br /> Apa Itu? --></h2>					
+				</div>
+				<img src="{{url:site}}{{theme:path}}/img/hypening.jpg" class="img-fluid d-none d-md-block" />
+				<img src="{{url:site}}{{theme:path}}/img/hypening-mobile.jpg" class="img-fluid d-block d-md-none mb-3" />
+			</div>
+			<div class="col-md-6">
+				<div class="d-none d-md-block">
+					<!-- <div class="label text-uppercase">about us</div> -->
+					<h3 class="text-uppercase mt-5">Cari tahu update event terkini di Singapura<!-- <br /> Apa Itu? --></h3>					
+				</div>
+				{{about:get}}
+					{{ content }}
+				{{/about:get}}
+			</div>
+		</div>
+	</div>
+</section>
+<section id="HomeStories" class="stories">
+	<div class="container">
+		<div class="label text-center text-uppercase">cerita</div>
+		<h2 class="text-center">TENTANG PASSION DAN EKSPLORASI</h2>
+		<p class="text-center text-second-color ls-50 p-heading">Temukan inspirasi di Singapura melalui berbagai event menarik untukmu</p>
+		<div class="list-stories row">
+			{{blog:get_article}}
+				<div class="col-md-6 col-lg-4">
+					<a href="{{url:site}}cerita/{{slug}}" class="story">
+						<div class="img" style="background-image: url({{ img_url }});"></div>
+						<h4>{{title}}</h4>
+						<p>{{lead_text}}</p>
+						<div class="link text-main-color font-weight-bold">Baca Selengkapnya</div>						
+					</a>
+				</div>
+			{{/blog:get_article}}
+		</div>
+		<div class="btn-area text-center">
+			<a href="{{url:site}}cerita" class="main-btn">LIHAT LEBIH BANYAK</a>
+		</div>
+	</div>
+</section>
+<section id="HomeEvents" class="events" {{event:count}}>
+	<div class="bg-white"></div>
+	<div class="container">
+		<div class="label text-center text-uppercase">event</div>
+		<h2 class="text-center">RAGAM KESERUAN SINGAPURA</h2>
+		<p class="text-center text-second-color ls-50 p-heading">Tinggalkan sejenak rutinitas dan kepenatan, temukan aktivitas dan pengalaman yang paling cocok untukmu.</p>
+		<div class="list-event-tags">
+			<a href="" class="active">SEMUA KATEGORI</a>
+			{{event:get_tags}}
+				<a href="{{url}}">{{tag}}</a>
+			{{/event:get_tags}}
+		</div>
+		<div class="list-events row">
+			{{event:get}}
+				<div class="col-md-6 col-lg-4">
+					<a href="{{link}}" class="event buy-now {{class}}" target="_blank">
+						<div class="img" style="background-image: url({{url}});"></div>
+						<div class="detail">
+							<div class="text-uppercase text-main-color date">{{date}}</div>
+							<h4>{{title}}</h4>
+							<p>{{description}}</p>							
+						</div>
+						<div class="bottom">
+							<div class="loc-n-time">
+								<div class="row">
+									<div class="col-4 time">
+										<span>WAKTu</span>
+										<div class="table-lo">
+											<div class="cell">{{time}}</div>
+										</div>
+									</div>
+									<div class="col-8 location">
+										<span>LOKASI</span>
+										<div class="table-lo">
+											<div class="cell">{{location}}</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="btn-area text-center">
+								<button class="main-btn-no-hover">SELANJUTNYA</button>
+							</div>							
+						</div>
+					</a>
+				</div>
+			{{/event:get}}
+		</div>
+		<div class="btn-area text-center">
+			<a href="{{url:site}}event" class="second-btn">LIHAT LEBIH BANYAK</a>
+		</div>
+	</div>
+</section>
+<section id="HomePromo" class="class-promo" {{promo:count}}>
+	<div class="container">
+		<div class="label text-center text-uppercase">PROMO</div>
+		<h2 class="text-center">PENAWARAN MENARIK</h2>
+		<p class="text-center text-second-color ls-50 p-heading">Ada banyak cara untuk lebih mudah merencakan trip Singapura-mu bersama rekan atau keluarga.<br /> Temukan pilihannya di sini sekarang juga</p>
+		<div class="list-promo row">
+			{{promo:get}}
+				<div class="col-md-6 col-lg-4">
+					<a href="{{link}}" class="promo" target="_blank">
+						<div class="img" style="background-image: url({{url}});"></div>
+						<h4>{{title}}</h4>
+						<p>{{description}}</p>
+						<div class="bottom">
+							<span>Mulai dari (/orang) :</span>
+							<div>
+								<div class="price float-left text-main-color">{{price}}</div>
+								<div class="btn-area float-right">
+									<button class="main-btn-no-hover">INFO</button>
+								</div>
+								<div class="clearfix"></div>								
+							</div>
+						</div>						
+					</a>
+				</div>
+			{{/promo:get}}
+		</div>
+		<div class="btn-area text-center">
+			<a href="{{url:site}}promo" class="second-btn">LIHAT LEBIH BANYAK</a>
+		</div>
+	</div>
+</section>
+<section id="OpenTrip" {{trip:count}}>
+	<div class="list-trip">
+		{{trip:get}}
+			<div>
+				<div class="trip" style="background-image: url('{{url}}');">
+					<div class="container text-center">
+						<div class="label text-uppercase">{{label}}</div>
+						<h2 class="text-light text-uppercase">{{title}}</h2>
+						<div class="date text-light text-uppercase">{{date}}</div>
+						<p class="text-light">{{description}}</p>
+						<div class="btn-area text-center">
+							<a href="{{link}}" class="second-btn-white text-uppercase" target="_blank">ikuti trip ini</a>
+						</div>
+					</div>
+				</div>			
+			</div>
+		{{/trip:get}}
+	</div>
+</section>
+<section id="Galeri" {{gallery:count}}>
+	<div class="container">
+		<div class="label text-uppercase">galeri</div>
+		<h2 class="text-light text-uppercase">visit<br /> singapore</h2>	
+		<div class="row">
+			<div class="col-md-4 col-lg-3">
+				<p class="text-light">Destinasi, event, dan atraksi, semua tentang pengalaman paling menyenangkan untuk mewujudkan passion-mu di Singapura</p>
+				<div class="btn-area d-none d-md-block">
+					<a href="https://www.instagram.com/explore/tags/visitsingapore/" target="_blank" class="second-btn-white text-uppercase">LIHAT LEBIH BANYAK</a>
+				</div>
+			</div>
+			<div class="col-md-8 col-lg-9">
+				<div class="row">
+					{{gallery:get}}
+						<div class="col-6 col-md-4">
+							<a href="{{url}}" class="ig-post" target="_blank">
+								<div class="img" style="background-image: url('{{img_url}}');"></div>
+							</a>
+						</div>
+					{{/gallery:get}}
+				</div>
+				<div class="btn-area d-block d-md-none text-center">
+					<a href="https://www.instagram.com/explore/tags/visitsingapore/" target="_blank" class="second-btn-white text-uppercase">LIHAT LEBIH BANYAK</a>
+				</div>
+			</div>
+		</div>	
+	</div>
+</section>
+<script type="text/javascript" src="{{url:site}}{{theme:path}}/js/slick.min.js"></script>
+<script type="text/javascript" src="{{url:site}}{{theme:path}}/js/home.js"></script>
+{{ theme:partial name="footer" }}

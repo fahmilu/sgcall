@@ -1,0 +1,73 @@
+/* recommendations style */
+#TopRecommendations{
+	padding-bottom: 40px;
+}
+#AdditionalResources .container{
+	background: #edebde;
+	padding-top: 53px;
+}
+
+#interviewList .container{
+	padding-top: 53px;
+	padding-bottom: 90px;
+}
+
+#interviewList .row{
+	margin: 0px;
+	padding-bottom: 20px;
+}
+
+#interviewList .row > div{
+	height: 500px;
+	display: block;
+	float: left;
+	background-size: cover!important;
+	position: relative;
+}
+
+#interviewList .row > div.left-side{
+	width: 52.19619326500732%;
+	background: url(../../img/interview-1.jpg) center center no-repeat;
+}
+
+#interviewList .row > div.right-side{
+	width: 47.80380673499268%;
+	background: url(../../img/interview-2.jpg) center center no-repeat;
+	transform: translateY(-60px);
+}
+
+#interviewList .row > div.left-side .content{
+	max-width: 649px;
+	width: 100%;
+	float: right;
+	padding: 60px 0px;
+}
+
+#interviewList .row > div.right-side .content{
+	max-width: 580px;
+	width: 100%;
+	padding: 60px 70px;
+	padding-right: 20px;
+}
+
+#interviewList .row > div .content h4{ color: #fff; }
+
+#interviewList .row > div .content p{
+	font-size: 28px;
+	line-height: 38px;
+	color: #fff;
+	margin-bottom: 33px;
+}
+
+/* end of recommendations style */
+@media only screen and (max-width : 1440px) {}
+
+@media only screen and (max-width : 768px) {}
+
+@media only screen and (max-width : 650px) {}
+
+@media only screen and (max-width : 480px) {}
+
+@media only screen and (max-width : 400px) {}
+
+@media only screen and (max-height : 480px) {}

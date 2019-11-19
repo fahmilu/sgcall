@@ -1,0 +1,109 @@
+/* methodology style */
+#Content{ overflow: hidden; }
+section#CompanySelection .container > p{
+	text-align: center;
+	margin-top: 16px;
+	color: #363636;
+}
+
+section#CompanySelection .container .row-19{
+	margin-left: -18.75px;
+	margin-right: -18.75px;
+	margin-bottom: 60px;
+}
+
+section#CompanySelection .container .row-19 [class*="col-"]{
+	width: 20%;
+	padding: 0px 18.75px;
+}
+
+section#CompanySelection .container .row-19 .area{
+	height: 220px;
+	background-color: #f1f1f1!important;
+	background-size: auto 100%!important;
+	background-position: center center!important;
+	background-repeat: no-repeat!important;
+	text-align: center;
+}
+
+section#CompanySelection .container .row-19 .area.europe{
+	background-image: url(../../img/Methodology-1@2x.jpg);
+}
+section#CompanySelection .container .row-19 .area.north-america{
+	background-image: url(../../img/Methodology-2@2x.jpg);
+}
+section#CompanySelection .container .row-19 .area.asia{
+	background-image: url(../../img/Methodology-3@2x.jpg);
+}
+section#CompanySelection .container .row-19 .area.brazil{
+	background-image: url(../../img/Methodology-4@2x.jpg);
+}
+section#CompanySelection .container .row-19 .area.south-africa{
+	background-image: url(../../img/Methodology-5@2x.jpg);
+}
+
+section#CompanySelection .container .row-19 .area .text{
+	font-size: 15px;
+	font-family: 'DIN Alternate';
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-top: 15px;
+}
+
+section#CompanySelection .container .row-19 .area .num{
+	margin-top: 65px;
+	font-weight: bold;
+	font-size: 65px;
+}
+
+section#TheQuestionnaire .container{ 
+	background: #edebde;
+	padding-top: 53px;
+	/* padding-bottom: 30px;  */
+}
+
+section#TheQuestionnaire .container p{ margin-bottom: 52px; } 
+
+section#TheQuestionnaire .container .block{
+	position: relative;
+}
+
+section#TheQuestionnaire .container .block .content{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: #fff;
+	background: #013042;
+	padding: 49px 60px 60px;
+	padding-right: 0px;
+}
+
+section#TheQuestionnaire .container .block .content:after{
+	content: '';
+	background: #013042;
+	top: 0px;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	right: 1px;
+	transform: translateX(100%);
+}
+
+section#TheQuestionnaire .container .block .content p{ margin-bottom: 32px; }
+
+section#CompanyConsultation{ padding-top: 67px; padding-bottom: 20px; }
+
+section#CompanyConsultation a.button{ margin-top: 10px; }
+
+
+@media only screen and (max-width : 1440px) {}
+
+@media only screen and (max-width : 768px) {}
+
+@media only screen and (max-width : 650px) {}
+
+@media only screen and (max-width : 480px) {}
+
+@media only screen and (max-width : 400px) {}
+
+@media only screen and (max-height : 480px) {}

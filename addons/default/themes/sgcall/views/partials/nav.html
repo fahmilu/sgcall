@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-md">
+	<div class="container">
+		<a class="navbar-brand" href="<?php echo site_url(); ?>">Navbar</a>
+<!-- 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button> -->
+		<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="icon-bar top-bar"></span>
+			<span class="icon-bar middle-bar"></span>
+			<span class="icon-bar bottom-bar"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul id="navSection" class="navbar-nav ml-auto">
+				<li class="nav-item" {{event:count}}>
+					<a class="nav-link text-uppercase <?php echo ($this->uri->segment(1) == 'event') ? 'active' : '' ; ?>" href="<?php echo site_url('event'); ?>">event</a>
+				</li>
+				<li class="nav-item" {{promo:count}}>
+					<a class="nav-link text-uppercase <?php echo ($this->uri->segment(1) == 'promo') ? 'active' : '' ; ?>" href="<?php echo site_url('promo'); ?>">PENAWARAN MENARIK</a>
+				</li>
+				<li class="nav-item" {{gallery:count}}>
+					<a class="nav-link js-scroll-trigger text-uppercase" href="<?php echo site_url('#Galeri'); ?>">GALERI</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-uppercase <?php echo ($this->uri->segment(1) == 'cerita') ? 'active' : '' ; ?>" href="<?php echo site_url('cerita'); ?>">CERITA</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link login text-uppercase" href="{{site:url}}daftar">DAFTAR MEMBER</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

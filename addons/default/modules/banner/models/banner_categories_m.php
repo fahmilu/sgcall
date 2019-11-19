@@ -1,0 +1,46 @@
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+/**
+ * Banner categories model
+ */
+class Banner_categories_m extends MY_Model {
+    
+    /**
+     * Constructor method
+     *
+     * @access public
+     * @return void
+     */
+    function __construct()
+    {
+        parent::__construct();
+    }
+    
+    function create_category($data)
+    {
+        return $this->insert($data, TRUE);
+    }
+    
+    function category_options()
+    {
+        $categories = $this->get_all();
+        
+        $options = array();
+        
+        if(!empty($categories))
+        {
+            foreach($categories as $category)
+            {
+                $options[$category->id] = $category->title;
+            }
+        }
+        
+        return $options;
+    }
+    
+    function published_categories()
+    {
+        return $this->get_many_by('published', 'yes');
+    }
+    
+}
+/* End of file faqs_categories_m.php */

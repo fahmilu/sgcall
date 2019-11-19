@@ -1,0 +1,65 @@
+/* contact style */
+section#OtherLink{ padding-top: 10px; }
+#EncouragingResult{
+	background: #013042;
+	position: relative;
+	z-index: 1;
+	padding-left: 47.80380673499268%;
+}
+
+#EncouragingResult .container{
+	margin: 0px;
+	padding-left: 60px;    
+	padding-right: 70px;    
+	max-width: 652px;
+	padding-top: 55px;
+	padding-bottom: 40px;
+}
+
+#EncouragingResult .img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: calc(100% + 60px);
+	width: 47.80380673499268%;
+	background: url(../../img/analysis-top.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+#EncouragingResult2 .container{
+	padding-top: 110px;
+	padding-bottom: 30px;
+}
+
+#PUT{
+	padding-top: 50px;
+	padding-bottom: 0px;
+}
+
+#PUT h6{
+	margin-bottom: 30px;
+}
+
+#PUT hr{
+    margin-top: 21px;
+    margin-bottom: 50px;
+}
+
+#PUT div.chck-green .item {
+    padding-left: 26px;
+    background: url(../../img/icons/Icon-GreyBulletList@2x.png) left top 7px no-repeat;
+    background-size: 8px auto!important;
+}
+
+/* end of contact style */
+@media only screen and (max-width : 1440px) {}
+
+@media only screen and (max-width : 768px) {}
+
+@media only screen and (max-width : 650px) {}
+
+@media only screen and (max-width : 480px) {}
+
+@media only screen and (max-width : 400px) {}
+
+@media only screen and (max-height : 480px) {}

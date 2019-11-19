@@ -1,0 +1,433 @@
+body{
+	margin:0;
+	padding:0;
+	color:#363636;
+	@include font-light;
+	@include font-layout(16, 4);
+	@include breakpoint($W1200){
+		font-size: 16px;
+		line-height: 26px;
+	}
+	// @include breakpoint($W768){
+	// 	// font-size: 14px;
+	// 	line-height: 24px;
+	// }
+	@include breakpoint($W576){
+		@include font-layout(14, 6);
+	}
+	// // @include breakpoint($W768){ padding-bottom: 100px; }
+	// @include breakpoint($W480){ padding-bottom: 80px; }
+	&.noscroll{
+		overflow: hidden;
+	}
+}
+
+// body.open-nav{
+// 	overflow: hidden;
+// }
+section{
+	position: relative;
+}
+
+#Content{
+	overflow-x: hidden;
+	// padding-top: 120px;
+	position: relative;
+	// @include breakpoint($W1366){
+	// 	// padding-top: 100px;
+	// }
+	// @include breakpoint(max-width 990px){
+	// 	// padding-top: 80px;
+	// }
+}
+
+.text-main-color{
+	color: $main-color;
+}
+
+.text-second-color{
+	color: $text-color-2;
+}
+.text-light{
+	color: #fff!important;
+}
+p{ 
+	margin-bottom: 28px;
+	&.p-heading{
+		margin-bottom: 54px;
+		@include breakpoint($W768){
+			margin-bottom: 0px;
+			br{ display: none; }	
+		}
+	}
+}
+
+a{ 
+	@include animation(.25s); 
+	color: #000;
+}
+
+.ls-50{
+	letter-spacing: .05em;
+}
+
+.flex{
+    @include breakpoint(min-width 576px){	
+		display: flex;
+		.flex-auto{
+			flex: auto;
+		}
+		.flex-initial{
+			flex: initial; 
+		}
+    }
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.strong{
+	@include font-bold;
+}
+
+.row{
+	margin-left: -10px;
+	margin-right: -10px;
+	[class*='col-']{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	&.row-13{
+		margin-left: -13px;
+		margin-right: -13px;
+		[class*='col-']{
+			padding-left: 13px;
+			padding-right: 13px;
+		}		
+	}
+	&.row-5{
+		margin-left: -5px;
+		margin-right: -5px;
+		[class*='col-']{
+			padding-left: 5px;
+			padding-right: 5px;
+		}		
+	}
+	@include breakpoint(min-width 1200px){
+		&.row-60{
+			margin-left: -60px;
+			margin-right: -60px;
+			[class*='col-']{
+				padding-left: 60px;
+				padding-right: 60px;
+			}		
+		}		
+	}
+}
+.btn-area{
+	button,
+	a{
+		line-height: 46px;
+		padding: 0px 26px;
+		// border: !important;
+		@include font-bold;
+		font-size: 20px;
+		text-align: center;
+		border: 2px solid;
+		display: inline-block;
+		vertical-align: middle;
+		@include animation(.25s);
+		cursor: pointer;
+		text-decoration: none!important;
+		@include breakpoint($W576){
+			width: 100%;
+			text-align: center;
+		}
+		&.main-btn{
+			background: $main-color;
+			border-color: $main-color;
+			color: #fff;		
+			&:hover{
+				background-color: $light-color;
+				color: $main-color;
+			}
+		}		
+		&.main-btn-no-hover{
+			background: $main-color;
+			border-color: $main-color;
+			color: #fff;		
+		}		
+		&.second-btn{
+			// background: $second-color;
+			color: $main-color;		
+			border-color: $main-color;
+			&:hover{
+				background: $main-color;
+				color: #fff;
+			}
+		}	
+		&.second-btn-white{
+			// background: $second-color;
+			color: $light-color;		
+			border-color: $light-color;
+			&:hover{
+				background: $light-color;
+				color: $main-color;
+			}
+		}
+	}
+}
+
+.text-light{
+	color: $light-color;
+}
+
+.text-main-color{
+	color: $main-color;
+}
+
+.text-color-2{
+	color: $text-color-2;
+}
+
+
+.container{
+	width: 100%;
+	padding: 0px 60px!important; 
+	max-width: 1300px;
+	position: relative;
+	@include breakpoint(max-width 768px){
+		padding: 0px 40px!important; 
+		&.c-60{
+			padding: 0px 60px!important; 
+		}
+	}
+	@include breakpoint(max-width 450px){
+		padding: 0px 25px!important; 
+		&.c-60{
+			padding: 0px 25px!important; 
+		}
+	}
+}
+
+h1{
+	@include font-bold;
+	@include font-layout(40,14);
+	margin-bottom: 58px;
+	@include breakpoint($W1200){
+		@include font-layout(35,10);
+	}
+	@include breakpoint($W1024){
+		@include font-layout(30,10);
+	}
+	@include breakpoint($W576){
+		@include font-layout(28,10);
+		margin-bottom: 20px;
+		text-align: center;
+	}
+}
+
+label{
+	&.title{
+		letter-spacing: .05em;
+		font-size: 14px;
+		color: #858586;
+	}
+}
+h2{
+	@include font-layout(50,10);
+	@include font-black;
+	@include breakpoint($W1200){
+		@include font-layout(40,8);
+	}
+	@include breakpoint($W1024){
+		@include font-layout(30,8);
+	}
+	margin-bottom: 14px;
+	&.title{
+		padding-top: 37px;
+	}
+}
+
+h3{
+	@include font-black;
+	@include font-layout(35,5);
+	margin-bottom: 18px;
+	@include breakpoint($W1024){ @include font-layout(26,4); }
+	@include breakpoint($W576){ @include font-layout(24,4); }
+}
+
+h4{
+	@include font-black;
+	@include font-layout(22,5);
+	margin-bottom: 20px;
+}
+
+h5{
+	@include font-black;
+	@include font-layout(48,10);
+	margin-bottom: 20px;
+}
+
+#alertModal{
+	.modal-dialog{
+		max-width: 350px;
+		.modal-content{
+			position: relative;
+			.close{
+				position: absolute;
+			    top: 10px;
+			    right: 10px;
+			    z-index: 1;
+			}
+			.modal-body{
+				padding: 33px 20px;
+			}
+		}
+	}
+}
+
+.table-lo{
+	display: table;
+	width: 100%;
+	height: 100%;
+	.cell{
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+ul.default-list{
+	list-style: none;
+	li{
+		position: relative;
+		padding-left: 40px;
+		margin-bottom: 23px;
+		@include breakpoint($MW768){
+			@include font-bold;
+			@include font-layout(22,4);
+			letter-spacing: .05em;
+		}
+		&:before{
+			@include befaft-abs(17px, 17px, 5px, 0px);
+			@include image-background('../img/list-icon.png');
+			@include breakpoint($W768){
+				width: 10px;
+				height: 10px;
+			}
+		}
+		@include breakpoint($W768){
+			margin-bottom: 10px;
+			padding-left: 20px;
+			@include font-layout(18,4);
+		}
+	}
+}
+
+.label{
+	@include font-black;
+	color: $main-color;
+	@include font-layout(14, 10);
+	letter-spacing: 0.05em;
+	margin-bottom: 3px;
+	margin-top: 20px;
+}
+
+.slick-dots{
+	@include pos-abs(unset, unset, 40px, 120px);
+	li{
+		display: inline-block;
+		margin: 0px 5px;
+		button{
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			font-size: 0px;
+			border: 1px solid $light-color;
+			background-color: unset;
+			outline: none;
+			cursor: pointer;
+			@include animation(.25s);
+			&:hover{
+				background-color: rgba(255, 255, 255, .5);
+			}
+		}
+		&.slick-active{
+			button{
+				background-color: $light-color;
+			}
+		}
+	}
+}
+
+.banner-default{
+	@include image-background('');
+	padding-top: 168px;
+	padding-bottom: 68px;
+	h2{
+		margin-bottom: 0px;
+	}
+	@include breakpoint($W576){
+		padding: 120px 0px 60px;
+	}
+}
+
+.pagination{
+	display: block;
+	ul{
+		width: 100%;
+		text-align: center;
+		list-style: none;
+		li{
+			display: inline-block;
+			a{
+				margin: 0px 3px;
+			}
+			// &:not([class]){
+				a{
+				    height: 26px;
+				    line-height: 26px;
+				    background-color: unset;
+				    border-radius: 50%;
+				    position: relative;
+				    color: #000;
+				    text-decoration: none;
+				    display: block;
+				    width: 26px;
+				    text-align: center;
+					&:hover{
+						background-color: #000;
+						color: #fff;
+					}
+					&.cur{
+						pointer-events: none;
+						background-color: #000;
+						color: #fff;
+					}
+				}							
+			// }
+			&.active{
+				span{
+					margin: 0px 3px;
+ 				    height: 26px;
+				    line-height: 26px;
+				    border-radius: 50%;
+				    position: relative;						
+				    background-color: #000;
+					color: #fff;
+				    text-decoration: none;
+				    display: block;
+				    width: 26px;
+				    text-align: center;					
+				}				
+			}
+		}
+	}
+}

@@ -1,0 +1,70 @@
+/* contact style */
+#MainBanner .container .content{ padding-bottom: 30px; }
+
+#ContactList{
+	padding-top: 20px;
+	overflow: hidden;
+	/* padding-bottom: 30px; */
+}
+
+#ContactList h6{
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+#ContactList a{
+	color: #319044;
+	display: inline-block;
+	line-height: 30px;
+	padding-left: 30px;
+	transition: all ease-in-out .25s;
+}
+
+#ContactList .row{ margin-bottom: 53px; }
+#ContactList .row:last-child{ margin-bottom: 13px; }
+
+#ContactList a.website{
+	background: url(../../img/icons/Icon-External@2x.png) center left no-repeat;
+	background-size: 18px auto;
+}
+
+#ContactList a.email{
+	background: url(../../img/icons/Icon-Email@2x.png) center left no-repeat;
+	background-size: 18px auto;
+}
+
+#ContactList a:hover{ text-decoration: underline!important; }
+
+#ContactList .block{ padding-top: 70px; }
+
+#ContactList .block .content{
+	background: #edebde;
+	padding: 45px 0px 50px 60px;
+	position: relative;
+	font-size: 28px;
+	line-height: 40px;
+}
+
+#ContactList .block .content:after{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateX(100%);
+	content: '';
+	background: #edebde;
+}
+
+/* end of contact style */
+@media only screen and (max-width : 1440px) {}
+
+@media only screen and (max-width : 768px) {}
+
+@media only screen and (max-width : 650px) {}
+
+@media only screen and (max-width : 480px) {}
+
+@media only screen and (max-width : 400px) {}
+
+@media only screen and (max-height : 480px) {}

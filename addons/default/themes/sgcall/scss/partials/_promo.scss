@@ -1,0 +1,87 @@
+// promo styling
+.class-promo{
+	.list-promo{
+		.promo{
+			display: block;
+			text-decoration: none!important;
+			height: 100%;
+			position: relative;
+			padding-bottom: 60px;
+			.img{
+				width: 100%;
+				padding-bottom: 65.79%;
+				background-color: #464646;
+				@include image-background('');
+				margin-bottom: 9px;
+			}
+			h4{
+				// min-height: 80px;
+				margin-bottom: 8px;
+				color: #363636;
+			}
+			p{
+				margin-bottom: 15px;
+				color: #555555;
+			}
+			.btn-area{
+				margin: 0px!important;
+				button{
+					line-height: 30px;
+					padding: 0px 20px;
+					font-size: 18px;
+					letter-spacing: 0;
+				}
+			}
+			span{
+				font-size: 14px;
+				color: #555555;
+				@include font-black;
+				display: block;
+			}
+			.price{
+				@include font-bold;
+				font-size: 26px;
+				line-height: 34px;
+				@include breakpoint($W576){ font-size: 20px; }
+			}
+			.bottom{
+				@include pos-abs(unset, 0, 0, 0);
+			}
+			&:hover{
+				.btn-area{
+					button{
+						background-color: #464646;
+						border-color: #464646;
+					}
+				}
+			}
+		}
+	}
+}
+
+#PromoBanner{
+	background-image: url('../img/promo-banner-mobile.jpg');
+	@include breakpoint(575px){
+		background-image: url('../img/promo-banner.jpg');
+	}
+}
+#PromoList{
+	padding-bottom: 76px;
+	padding-top: 140px;
+	@include breakpoint($W576){
+		padding-top: 60px;
+		padding-bottom: 75px;
+	}
+	.list-promo{
+		.col-md-4{
+			margin-bottom: 50px;
+			@include breakpoint($W576){
+				margin-bottom: 30px
+			}
+		}		
+	}
+	.pagination{
+		margin-top: 10px;		
+	}
+}
+// end of promo styling

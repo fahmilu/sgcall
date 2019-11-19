@@ -1,0 +1,161 @@
+// stories styling
+.stories{
+	.list-stories{
+		.story{
+			display: block;
+			text-decoration: none!important;
+			margin-bottom: 50px;
+			@include breakpoint($W576){ margin-bottom: 40px; }
+			.img{
+				width: 100%;
+				padding-bottom: 63.324538259%;
+				background-color: #464646;
+				@include image-background('');
+				margin-bottom: 33px;
+				@include breakpoint($W576){ margin-bottom: 10px; }
+			}
+			h4{
+				@include breakpoint($MW768){
+					min-height: 80px;
+				}
+				@include breakpoint($W576){ margin-bottom: 10px; }
+				color: #363636;
+				// margin-bottom: 
+			}
+			p{
+				color: #555555;
+				margin-bottom: 23px;
+				@include breakpoint($W576){ margin-bottom: 10px; }
+			}
+			.link{
+				display: inline-block;
+				color: $main-color!important;
+				text-decoration: none!important;
+				padding-right: 20px; 
+				position: relative;
+				&:before{
+					@include befaft-abs(22px, 14px, 50%, unset);
+					@include image-background('../img/icons/arrow-btn.png');
+					right: 0;
+					margin-top: -7px;
+					margin-right: 10px;
+					transform: translateX(100%);
+					@include animation(.25s);
+				}
+			}
+			&:hover{
+				.link:before{
+					transform: translateX(130%);
+				}
+			}
+		}
+	}
+}
+
+#StoriesBanner{
+	background-image: url('../img/cerita-banner-mobile.jpg');
+	@include breakpoint(575px){
+		background-image: url('../img/cerita-banner.jpg');
+	}
+}
+#StoriesList{
+	padding-bottom: 114px;
+	padding-top: 123px;
+	.pagination{
+		margin-top: 47px;
+	}
+	@include breakpoint($W576){
+		padding-top: 60px;
+		padding-bottom: 75px;
+	}
+	.list-stories{
+		.story{
+			@include breakpoint(480px 768px){
+				padding-left: 220px;
+				.img{
+					width: 200px;
+					padding-bottom: 0px;
+					height: 135px;
+					@include pos-abs(0,10px,0,0);
+				}
+				h4{
+					font-size: 18px;
+					line-height: 22px;
+					margin-bottom: 6px;
+				}
+			}			
+		}
+	}
+}
+
+#StoryDetail{
+    padding-bottom: 87px;
+    padding-top: 223px;
+	@include breakpoint($W576){
+		padding-top: 120px;
+		padding-bottom: 75px;
+	}
+	.img-fluid{
+		width: 100%;
+		margin-bottom: 106px;
+		@include breakpoint($W768){
+			margin-bottom: 20px;
+		}
+	}
+	h2{
+		margin-bottom: 33px;
+		@include breakpoint($W576){
+			text-align: left!important;
+			@include font-regular;
+			@include font-layout(27, 8);
+			color: #4c4c4c;
+			margin-bottom: 20px;
+			letter-spacing: .025em;
+		}
+	}
+	.label{
+		@include breakpoint($W576){
+			text-align: left!important;
+		}		
+	}
+	.body-content{
+		color: #555555;
+		max-width: 980px;
+		margin: 0px auto;
+		p{
+			margin-bottom: 17px;
+		}
+		img{
+			width: 100%;
+			max-width: 100%;
+			margin-bottom: 17px;
+		}
+		.instagram-media{
+			margin: 0px auto 21px!important;
+			max-width: 500px!important;
+		}
+		.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } 
+		.embed-container iframe, 
+		.embed-container object, 
+		.embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+	}
+}
+
+#OtherStories{
+	padding-bottom: 44px;
+	.row{
+		hr{
+			width: 100%;
+			height: 1px;
+			background-color: #a1a1a1;
+			margin: 0px;
+			margin-bottom: 60px;
+		}
+	}
+	h3{
+		color: #363636;
+		font-size: 30px;
+		margin-bottom: 56px;
+	}
+}
+// end of stories styling

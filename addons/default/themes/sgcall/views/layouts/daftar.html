@@ -1,0 +1,128 @@
+{{ theme:partial name="header" }}
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="{{url:site}}{{theme:path}}/js/jquery.validate.js"></script>
+<script type="text/javascript" src="{{url:site}}{{theme:path}}/js/additional-methods.min.js"></script>
+<section id="Registration">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<h2 class="text-light text-uppercase">JADILAH MEMBER SEKARANG DAN DAPATKAN BERBAGAI INFORMASI SERTA PENAWARAN MENARIK</h2>
+				<h4 class="text-light text-uppercase">Yang akan Anda dapatkan:</h4>
+				<ol class="text-light">
+					<li>Informasi terupdate seputar Event di Singapura</li>
+					<li>Penawaran dengan harga menarik untuk atraksi atau event di Singapura</li>
+					<li>Berbagai kejutan menarik yang akan hadir di moment tertentu.</li>
+				</ol>
+			</div>
+			<div class="col-lg-6">
+				<div class="form float-lg-right">		
+					<?php echo form_open_multipart('registration/submit', array('id' => 'FormRegistration')); ?>
+					<div class="form-group">
+						<label for="Nama">Nama</label>
+					  	<input type="text" class="form-control" id="name" name="name" required="required" placeholder="Your Name">
+					</div>
+					<div class="form-group">
+						<label for="Email">Email</label>
+					  	<input type="email" class="form-control" id="email" name="email" required="required" placeholder="yourmail@kumparan.com">
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-6 birthday">
+								<label for="Birthday">Tanggal Lahir</label>
+					  			<input type="text" class="form-control" id="birtday" name="birtday" required="required" placeholder="DD/MM/YYYY">
+							</div>
+							<div class="col-md-6">
+								<label for="gender">Jenis Kelamin</label>
+							  	<select name="gender">
+							  		<option value="pria">Pria</option>
+							  		<option value="wanita">Wanita</option>
+							  	</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="province">Provinsi</label>
+						<?php $prov = ['Aceh','Sumatera Utara','Sumatera Barat','Riau','Kepulauan Riau','Jambi','Bengkulu','Sumatera Selatan','Kepulauan Bangka Belitung','Lampung','Banten','Jawa Barat','DKI Jakarta','Jawa Tengah','Yogyakarta','Jawa Timur','Bali','Nusa Tenggara Barat','Nusa Tenggara Timur','Kalimantan Utara','Kalimantan Barat','Kalimantan Tengah','Kalimantan Selatan','Kalimantan Timur','Gorontalo','Sulawesi Utara','Sulawesi Barat','Sulawesi Tengah','Sulawesi Selatan','Sulawesi Tenggara','Maluku Utara','Maluku','Papua','Papua Barat']; ?>
+						<select name="province">
+							<?php foreach ($prov as $p): ?>
+								<option value="<?php echo $p; ?>"><?php echo $p; ?></option>
+							<?php endforeach ?>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="gender">Apakah Anda pernah ke Singapura?</label>
+
+						<label class="radio-inline"><input type="radio" name="visited_sg" value="yes" required="required">Ya</label>
+						<label class="radio-inline"><input type="radio" name="visited_sg" value="no">Tidak</label>
+						<label id="visited_sg-error" class="error" for="visited_sg" style="display: none;">Harap dipilih.</label>
+
+					</div>
+					<div class="form-group">
+						<label for="gender">Sudah berapa kali Anda mengunjungi Singapura selama ini?</label>
+						<label class="radio-inline"><input type="radio" name="visited_sg_count" value="> 5" required="required">> 5</label>
+						<label class="radio-inline"><input type="radio" name="visited_sg_count" value="< 5">< 5</label>
+						<label class="radio-inline"><input type="radio" name="visited_sg_count" value="0">Belum Pernah</label>
+						<label id="visited_sg_count-error" class="error" for="visited_sg_count" style="display: none;">Harap dipilih.</label>
+					</div>
+					<button type="submit" name="submit" value="submit" class="btn text-uppercase">daftar</button>
+					</form>
+				</div>				
+			</div>
+		</div>
+	</div>
+</section>
+<script type="text/javascript">
+
+	$.extend($.validator.messages, {
+	    required: "Harap diisi.",
+	    email: "Harap isi dengan alamat email yang benar",
+	});
+
+    $(document).ready(function() {
+    	$('header').addClass('always-black');
+
+    	// $('#birtday').datepicker({
+	    // 	changeMonth: true,
+	    //   	changeYear: true,
+	    //   	defaultDate: '1/1/2001',
+	    //   	dateFormat: 'dd/mm/yy'
+	    // });
+        // $('form').on('submit', function(e) {
+        //   return false;
+        // });
+        $('#FormRegistration').validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true,
+                },
+            },
+            submitHandler: function(form) {
+                $('#FormRegistration').find('button[type="submit"]').attr("disabled", true);
+                // $('.preloader').show();
+                form.submit();
+            }
+        });
+    });
+</script>
+<?php if($this->session->flashdata('registration-success')){ ?>
+	<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModal" aria-hidden="true">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	              <span aria-hidden="true">&times;</span>
+	            </button>
+	            <div class="modal-body"><?php echo $this->session->flashdata('registration-success'); ?></div>
+	        </div>
+	    </div>
+	</div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#alertModal').modal('show');
+        });
+    </script>
+<?php } ?>
+<div class="preloader"></div>
+{{ theme:partial name="footer" }}

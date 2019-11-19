@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <?php
+        if($this->uri->segment(1) == ''){
+            echo "<title>{{ settings:site_name }}</title>";
+        }
+        else{
+            echo "<title>{{ template:title }} | {{ settings:site_name }}</title>";
+        }
+    ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+<!--     <link rel="shortcut icon" href="{{url:site}}addons/default/themes/mediv/img/favicon.png" type="image/png">
+    <link rel="icon" href="{{url:site}}addons/default/themes/mediv/img/favicon.png" type="image/png"> -->
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- css global -->
+    <link rel="stylesheet" href="{{url:site}}{{theme:path}}/css/bootstrap.css?v=2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"/>
+    <link rel="stylesheet" href="{{url:site}}{{theme:path}}/css/slick.css?v=1" />
+    <link rel="stylesheet" href="{{url:site}}{{theme:path}}/css/default.css?v=1" />
+    <script async defer src="https://platform.instagram.com/en_US/embeds.js"></script>
+    {{ template:metadata }}
+
+    <!-- js global -->
+    {{asset:js file="modernizr.js" group="header"}}
+    {{asset:js file="jquery.js" group="header"}}
+    {{asset:js file="bootstrap.bundle.min.js" group="header"}}
+    {{asset:js file="jquery.easing.min.js" group="header"}}
+    {{asset:js file="jquery.lazy.min.js" group="header"}}
+    {{asset:js file="scrolling-nav.js" group="header"}}
+    {{asset:js file="script.js" group="header"}}
+    {{ asset:render group="header" }}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    {{theme:partial name="tracker"}}
+</head>
+<body> 
+    {{theme:partial name="tracker-body"}}
+    <header class="fixed-top">
+        {{theme:partial name="nav"}}
+    </header>
+    <div id="Content">  

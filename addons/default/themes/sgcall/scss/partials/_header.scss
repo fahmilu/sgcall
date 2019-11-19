@@ -1,0 +1,324 @@
+// header
+header{
+	height: 130px;
+	@include breakpoint($W1366){
+		height: 100px;
+	}
+	@include breakpoint(max-width 990px){
+		height: 80px;
+	}
+	&:before{
+		@include befaft-abs(100%, 100%, 0px, 0px);
+		background-color: #f82828;
+		transform: translateY(-100%);
+		@include animation(.25s);
+	}
+	.navbar{
+		padding: 0px;
+		@include breakpoint(max-width 990px){
+			.navbar-collapse{
+				position: absolute;
+				top: 0;
+				left: 0px;
+				width: 100%;
+				@include animation(.5s);
+				// background: #004f81;
+				align-items: unset;
+				&:before{
+					content: '';
+					position: absolute;
+					background: #f82828;
+					width: 100%;
+					height: 120vh;
+					top: 0;
+					left: 0;
+					transform: translateY(-100%);
+					@include animation(.5s);
+				}
+				&.collapsing{
+					&:before{
+						transform: translateY(0%);
+					}					
+				}
+				&.show{
+					min-height: 100vh;
+					// display: block!important;
+					&:before{
+						transform: translateY(0%);
+					}
+				}
+			}
+		}
+		.navbar-brand{
+			font-size: 0px;
+			@include watermark('../img/logo.png', 215px, 43px);
+			background-size: 100% auto;
+			margin-top: 44px;
+			padding: 0px;
+			@include breakpoint($W1200){
+			    width: 200px;
+			    height: 55px;
+			    margin-top: 6px;
+			}
+			@include breakpoint(max-width 990px){
+				margin-top: 12px;
+				position: relative;
+				z-index: 1;
+			}
+			@include breakpoint($W576){
+			    width: 150px;
+			    // height: 27px;
+			}
+		}
+		.navbar-nav{
+			margin-top: 0px;
+			@include breakpoint(min-width 990px){
+				height: 93px;
+			}
+			.nav-item:first-child{
+				.nav-link{
+					@include breakpoint(min-width 990px){
+						border: none!important;
+					}
+				}
+			}
+			.nav-item{		
+				@include breakpoint(max-width 990px){
+					padding: 0px 60px;
+				}				
+				@include breakpoint($W768){
+					padding: 0px 40px;
+				}		
+				@include breakpoint(max-width 450px){
+					padding: 0px 25px;
+				}
+			}
+			.nav-link{
+				color: $light-color;
+				@include font-bold;
+				letter-spacing: .05em;
+				font-size: 18px;
+				line-height: 26px;
+				padding: 0px;
+				margin: 0px 16px;
+				margin-top: 49px;
+				white-space: nowrap;
+				position: relative;
+				&:before{
+					@include befaft-abs(0%, 2px, unset, 0px);
+					background: $light-color;
+					bottom: 0px;
+					@include animation(.25s);
+				}
+				@include breakpoint($W1200){
+				    font-size: 15px;
+				    margin: 36px 10px 0px;
+				}
+				@include breakpoint(max-width 990px){
+					margin-left: 0px;
+					margin-top: 0px;
+					text-align: left;
+				}
+				&:not(.login){
+					@include breakpoint(min-width 990px){
+						&:hover{
+							&:before{
+								width: 100%;
+							}
+						}
+						&.active{
+							&:before{
+								width: 100%;
+							}
+						}
+					}
+					@include breakpoint(max-width 990px){
+						border: none;
+						font-size: 26px;
+						line-height: 80px;
+						margin-bottom: 0px; 
+						border-bottom: 1px solid #d6070d;
+						&.active{
+							@include font-bold;
+						}
+					}
+					@include breakpoint($W576){
+					}
+					@include breakpoint(max-width 450px){
+						font-size: 20px;
+						line-height: 60px;
+					}					
+				}
+				&.login{
+					// @include breakpoint(min-width 990px){
+						color: $light-color;
+						border-radius: 10px;
+	  					padding: 0px 15px;
+					    text-align: center;
+					    line-height: 38px;
+	  					border: 1px solid $light-color;
+	  					position: relative;
+	  					margin-top: 41px;
+	  					margin-left: 26px;
+	  				// }
+	  				@include breakpoint($W1200){
+	  					margin-top: 28px;
+	  				}
+  					// margin-left: 38px;
+					@include breakpoint(max-width 990px){
+						margin: 0px;
+						margin-top: 20px;
+						font-size: 26px;
+	  					background-color: unset!important;
+	  					border:2px solid $light-color!important;
+	  					color: $light-color!important; 
+	  					line-height: 48px;
+	  					border-radius: 0px;						
+					}
+					@include breakpoint(max-width 450px){
+						font-size: 20px;
+					}	
+  					&:hover{
+  						@include breakpoint(min-width 990px){
+	  						background-color: $light-color!important;
+	  						border-color: $light-color!important;
+	  						color: $main-color!important;  							
+  						}
+  					}
+				}
+			}
+			li{
+				&.active{
+					.nav-link{
+						&:not(.login){
+							@include breakpoint(max-width 990px){ background-color: #012b5885; }
+						}
+						&:after{ width: 100%; }
+					}
+				}
+			}
+
+		}
+	}
+	&.always-black,
+	&.black{
+		&:before{
+			transform: translateY(0);
+		}
+		.navbar{
+			.navbar-nav{
+				.nav-link{
+					&.login{
+						@include breakpoint(min-width 990px){
+					  		background-color: $light-color!important;
+					  		border-color: $light-color!important;
+					  		color: $main-color!important;  
+					  		&:hover{
+						  		background-color: unset!important;
+						  		border-color: $light-color!important;
+						  		color: $light-color!important; 
+					  		}							
+						}
+					}					
+				}
+			}
+		}
+
+	}
+}
+
+.icon-bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    transition: all 0.2s;
+    margin-top: 7px;
+}
+ 
+.navbar-toggler {
+	padding: 0px;
+	border: none;
+	background: transparent !important;
+	outline: none!important;
+	margin-top: 5px;
+	position: relative;
+	z-index: 1;
+}
+
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: -6% 13%;
+}
+ 
+.navbar-toggler .middle-bar {
+	opacity: 0;
+}
+ 
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 7% 130%;
+}
+ 
+.navbar-toggler.collapsed .top-bar {
+	transform: rotate(0);
+}
+ 
+.navbar-toggler.collapsed .middle-bar {
+	opacity: 1;
+}
+ 
+.navbar-toggler.collapsed .bottom-bar {
+	transform: rotate(0);
+}
+
+@media (max-width: 990px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    // .navbar-collapse {
+    //     border-top: 1px solid transparent;
+    //     box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    // }
+	.collapse:not(.show) {
+	    display: none!important;
+	}
+    .navbar-nav {
+        float: none!important;
+        // margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+        width: 100%;
+    }
+
+	// .collapsing {
+	//     position: relative;
+	//     height: 0;
+	//     overflow: hidden;
+	//     transition: height 0.35s ease;
+	// }
+
+    .navbar-expand-md .navbar-toggler{ display: block; }
+
+    .navbar-expand-md .navbar-nav{
+		position: relative;
+		flex-direction: unset;
+    	display: block;
+    	width: 100%;
+    	padding-top: 150px;
+    	// background: url('../img/logo.png') left 40px top 30px no-repeat;
+    	// background-size: 200px;
+    	@include breakpoint($W576){
+			background-size: 210px;
+		    padding-top: 100px;
+		}
+		@include breakpoint(max-width 450px){
+		    background-position: left 25px top 20px;
+		}
+
+	}
+}
